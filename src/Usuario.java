@@ -83,21 +83,14 @@ public class Usuario {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	
 	/*
 	 * 
 	 */
-	public  boolean validarDni() {
-		
-		return dni.matches("^[0-8] {7,8} [T|R|W|A|G|M|Y|F|P|D|D|X|B|N|J|Z|S|Q|V|H|L|C|K|E]$");
-		
-	}
-	/*
-	 * 
-	 */
-@Override
+	@Override
 	public String toString(){
-		return "Sus datos son " + "\n" + "Dni " + dni + "\n" + "Nombre " + nombre + "\n" + "Primer Apellido " + primerApellido + "\n" 
-											+ "Segund Apellido " + segundoApellido + "\n" + "Edad " + edad;
+		return "Sus datos son " + "\n" + "Dni: " + dni + "\n" + "Nombre: " + nombre + "\n" + "Primer Apellido: " + primerApellido + "\n" 
+											+ "Segund Apellido: " + segundoApellido + "\n" + "Edad: " + edad;
 		
 	}
 	
