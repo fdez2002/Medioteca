@@ -23,24 +23,48 @@ public abstract class Medios {
 		this.fechaAdquisicion = fechaAdquisicion;
 		this.precioCompra = precioCompra;
 	}
-	/*
-	 * Metodos
-	 * 
+
+	/**
+	 * @return the numRegistro
 	 */
-	public void añadirMedios() {
-		
+	public int getNumRegistro() {
+		return numRegistro;
 	}
-	public void modificarDatosMedios() {
-		
+
+	/**
+	 * @param numRegistro the numRegistro to set
+	 */
+	public void setNumRegistro(int numRegistro) {
+		this.numRegistro = numRegistro;
 	}
-	public void borrarMedios() {
-		
+
+	/**
+	 * @return the fechaAdquisicion
+	 */
+	public int getFechaAdquisicion() {
+		return fechaAdquisicion;
 	}
-	public void imprimirFichaMedio() {
-		
+
+	/**
+	 * @param fechaAdquisicion the fechaAdquisicion to set
+	 */
+	public void setFechaAdquisicion(int fechaAdquisicion) {
+		this.fechaAdquisicion = fechaAdquisicion;
 	}
-	public void prestarMediosUsuario() {
-		
+
+	/**
+	 * @return the precioCompra
+	 */
+	public float getPrecioCompra() {
+		return precioCompra;
 	}
+
+	/**
+	 * @param precioCompra the precioCompra to set
+	 */
+	public void setPrecioCompra(float precioCompra) {
+		this.precioCompra = precioCompra;
+	}
+	
 
 }

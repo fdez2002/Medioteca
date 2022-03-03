@@ -1,5 +1,5 @@
 
-public class Usuario {
+public class Usuario implements Comparable<Usuario> {
 	protected String dni;
 	protected String nombre;
 	protected String primerApellido;
@@ -11,6 +11,9 @@ public class Usuario {
 	 */
 	public Usuario() {
 		
+	}
+	public Usuario(String admi) {
+		this.dni=admi;
 	}
 	/*
 	 * Constructor con parametros
@@ -90,8 +93,16 @@ public class Usuario {
 	@Override
 	public String toString(){
 		return "Sus datos son " + "\n" + "Dni: " + dni + "\n" + "Nombre: " + nombre + "\n" + "Primer Apellido: " + primerApellido + "\n" 
-											+ "Segund Apellido: " + segundoApellido + "\n" + "Edad: " + edad;
+											+ "Segund Apellido: " + segundoApellido + "\n" + "Edad: " + edad + "\n";
 		
+	}
+	
+	public int compareTo(Usuario o){
+		return this.dni.compareTo(o.dni);
+	}
+	
+	public boolean equals(Usuario o){
+		return this.dni.equals(o.dni);
 	}
 	
 
