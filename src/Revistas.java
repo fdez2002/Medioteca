@@ -102,8 +102,9 @@ public class Revistas extends Medios {
 	}
 	@Override
 	public String toString(){
-		return "Revistas disponibles" + "\n" + "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+		return "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm;
+		
 		
 	}
 	

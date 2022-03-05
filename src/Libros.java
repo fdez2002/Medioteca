@@ -16,14 +16,12 @@ public class Libros extends Medios {
 	 * Contructor sin parametros
 	 * 
 	 */
-	public Libros() {
-		
-	}
+	public Libros() {}
 	/*
 	 * Constructor con parametros
 	 */
 	public Libros(String isbm, int anoPublicacion, int numPaginas, String titulo, String tematica, String indice, String autor,
-			int numRegistro, String fechaAdquisiscion, float precioCompra) {
+			int numRegistro, String fechaAdquisiscion, double precioCompra) {
 				super(numRegistro, fechaAdquisiscion, precioCompra);
 		this.isbm = isbm;
 		this.anoPublicacion = anoPublicacion;
@@ -117,9 +115,10 @@ public class Libros extends Medios {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
+	
 	@Override
 	public String toString(){
-		return "Libros disponibles" + "\n" + "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "Autor" + autor + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+		return  "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "\n" + "Autor: " + autor + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm;
 		
 	}

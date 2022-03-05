@@ -122,7 +122,7 @@ public class Discos extends Medios {
 	}
 	@Override
 	public String toString(){
-		return "Discos disponibles" + "\n" + "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+		return "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Cnciones: " + canciones + "\n" + "Soporte: " + soporte + "\n" + "ISMN: " + ismn;
 		
 	}

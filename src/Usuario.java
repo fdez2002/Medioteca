@@ -92,9 +92,9 @@ public class Usuario implements Comparable<Usuario> {
 	 */
 	@Override
 	public String toString(){
+		System.out.println("-----------------------------------------------------------------");
 		return "Sus datos son " + "\n" + "Dni: " + dni + "\n" + "Nombre: " + nombre + "\n" + "Primer Apellido: " + primerApellido + "\n" 
 											+ "Segund Apellido: " + segundoApellido + "\n" + "Edad: " + edad + "\n";
-		
 	}
 	
 	public int compareTo(Usuario o){

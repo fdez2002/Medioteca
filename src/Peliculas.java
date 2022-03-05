@@ -135,7 +135,7 @@ public class Peliculas extends Medios {
 	 */
 	@Override
 	public String toString(){
-		return "Peliculas disponibles" + "\n" + "Titulo: " + titulo + "\n" + "Director: " + director + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+		return  "Titulo: " + titulo + "\n" + "Director: " + director + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Duracion: " + duracion + "\n" + "Estilo: " + estilo + "\n" + "Protagonista: " + protagonista + "\n" + "Soporte: " + soporte
 												+ "ISAN :" + isan;
 		

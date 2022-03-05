@@ -7,13 +7,16 @@ import java.util.Scanner;
  */
 	public class App {
 	
-	public ArrayList<Usuario> listaUsuarios;//Array de usuarios
-	public ArrayList<Libros> listaLibros;//Array de libros
-	public ArrayList<Discos> listaDiscos;//Array de discos
-	public ArrayList<Revistas> listaRevistas;//Array de revistas
-	public ArrayList<Peliculas> listaPeliculas;//Array de peliculas
+	public ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();//Array de usuarios
+	public ArrayList<Libros> listaLibros = new ArrayList<Libros>();;//Array de libros
+	public ArrayList<Discos> listaDiscos = new ArrayList<Discos>();;//Array de discos
+	public ArrayList<Revistas> listaRevistas = new ArrayList<Revistas>();;//Array de revistas
+	public ArrayList<Peliculas> listaPeliculas = new ArrayList<Peliculas>();;//Array de peliculas
 
 	public Usuario usuarioLogado = new Usuario();//Objeto de usuarios
+	public Libros libro = new Libros();//Objeto de Libros
+	public Discos disco = new Discos();
+	public Revistas revista = new Revistas();
 	
 	public static Scanner teclado = new Scanner(System.in); //Escaner para la introducion de datos por teclado
 	/*
@@ -21,14 +24,11 @@ import java.util.Scanner;
 	 */
 	public App() {
 	
-	listaUsuarios = new ArrayList<Usuario>(); // ArrayList de usuarios
+	//listaUsuarios = new ArrayList<Usuario>(); // ArrayList de usuarios
 
 	listaUsuarios.add(new Usuario("36520460B", "Antonio", "Fernandez", "Villa", 20));//Usuario 1
-	
 	listaUsuarios.add(new Usuario("26520460B", "Julia", "Perez", "Garrido", 16));//Usuario 2
-	
 	listaUsuarios.add(new Usuario("56520460B", "Juan", "Baena", "Valcarcel", 45));//Usuario 3
-	
 	listaUsuarios.add(new Usuario("66520460B", "Sara", "Peñafiel", "Diaz", 20));//Usuario 4
 	
 	//listaLibros = new Arraylist<Libros>();
@@ -48,6 +48,42 @@ import java.util.Scanner;
 	listaPeliculas.add(new Peliculas("52345678910111213", 2011, "Titanic2", "Juan2", "CD", "Protagonista2", "Amor2", "1:23", 609, "13/04/2021", 4.2));//Pelicula 2
 	listaPeliculas.add(new Peliculas("52345678910111213", 2021, "Titanic3", "Juan3", "CD", "Protagonista3", "Amor3", "1:24", 239, "14/04/2021", 2.2));//Pelicula 3
 	
+	}
+	public void recorrerLibros() {
+		System.out.println(" ------------------");
+		System.out.println("|Libros Disponibles|");
+		System.out.println(" ------------------");
+
+		for(Libros libro : listaLibros) {
+			System.out.println("---------------------------------------------------------------");
+		    System.out.println(libro.toString());
+			System.out.println("---------------------------------------------------------------");
+
+		}
+	}
+	public void recorrerDiscos() {
+		System.out.println(" ------------------");
+		System.out.println("|Discos Disponibles|");
+		System.out.println(" ------------------");
+
+		for(Discos disco : listaDiscos) {
+			System.out.println("---------------------------------------------------------------");
+		    System.out.println(disco.toString());
+			System.out.println("---------------------------------------------------------------");
+
+		}
+	}
+	public void recorrerRevistas() {
+		System.out.println(" ------------------");
+		System.out.println("|Revistas Disponibles|");
+		System.out.println(" ------------------");
+
+		for(Revistas revista : listaRevistas) {
+			System.out.println("---------------------------------------------------------------");
+		    System.out.println(revista.toString());
+			System.out.println("---------------------------------------------------------------");
+
+		}
 	}
 	
 	/*
@@ -189,6 +225,12 @@ import java.util.Scanner;
 				System.out.println("Que desea realizar?" + "\n" + "1--> Creacion de cuenta \n" + "2--> Ingrese a la cuenta");
 				System.out.println("3 --> Para salir");
 				
+				recorrerLibros();
+				System.out.println();
+				recorrerDiscos();
+				System.out.println();
+				recorrerRevistas();
+				
 				opcionesMenu = teclado.nextInt();
 				//teclado.nextLine();//Limpiamos buffer de entrada
 				
@@ -225,5 +267,6 @@ import java.util.Scanner;
 			while ((opcionesMenu==1)||(opcionesMenu==2));
 		}
 }
+
 
 
