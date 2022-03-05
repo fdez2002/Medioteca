@@ -7,16 +7,17 @@ import java.util.Scanner;
  */
 	public class App {
 	
-	public ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();//Array de usuarios
-	public ArrayList<Libros> listaLibros = new ArrayList<Libros>();;//Array de libros
-	public ArrayList<Discos> listaDiscos = new ArrayList<Discos>();;//Array de discos
-	public ArrayList<Revistas> listaRevistas = new ArrayList<Revistas>();;//Array de revistas
-	public ArrayList<Peliculas> listaPeliculas = new ArrayList<Peliculas>();;//Array de peliculas
+	public static ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();//Array de usuarios
+	public static ArrayList<Libros> listaLibros = new ArrayList<Libros>();;//Array de libros
+	public static ArrayList<Discos> listaDiscos = new ArrayList<Discos>();;//Array de discos
+	public static ArrayList<Revistas> listaRevistas = new ArrayList<Revistas>();;//Array de revistas
+	public static ArrayList<Peliculas> listaPeliculas = new ArrayList<Peliculas>();;//Array de peliculas
 
-	public Usuario usuarioLogado = new Usuario();//Objeto de usuarios
-	public Libros libro = new Libros();//Objeto de Libros
-	public Discos disco = new Discos();
-	public Revistas revista = new Revistas();
+	public static Usuario usuarioLogado = new Usuario();//Objeto de usuarios
+	public static Libros libro = new Libros();//Objeto de Libros
+	public static Discos disco = new Discos();
+	public static Revistas revista = new Revistas();
+	public static Peliculas pelicula = new Peliculas();
 	
 	public static Scanner teclado = new Scanner(System.in); //Escaner para la introducion de datos por teclado
 	/*
@@ -49,7 +50,7 @@ import java.util.Scanner;
 	listaPeliculas.add(new Peliculas("52345678910111213", 2021, "Titanic3", "Juan3", "CD", "Protagonista3", "Amor3", "1:24", 239, "14/04/2021", 2.2));//Pelicula 3
 	
 	}
-	public void recorrerLibros() {
+	public static void recorrerLibros() {
 		System.out.println(" ------------------");
 		System.out.println("|Libros Disponibles|");
 		System.out.println(" ------------------");
@@ -61,7 +62,7 @@ import java.util.Scanner;
 
 		}
 	}
-	public void recorrerDiscos() {
+	public static void recorrerDiscos() {
 		System.out.println(" ------------------");
 		System.out.println("|Discos Disponibles|");
 		System.out.println(" ------------------");
@@ -73,7 +74,7 @@ import java.util.Scanner;
 
 		}
 	}
-	public void recorrerRevistas() {
+	public static void recorrerRevistas() {
 		System.out.println(" ------------------");
 		System.out.println("|Revistas Disponibles|");
 		System.out.println(" ------------------");
@@ -208,28 +209,246 @@ import java.util.Scanner;
 	 * Ingresar a la cuenta
 	 * 
 	 */
-	public int comprobarCuenta(String dni) {
+	public static int comprobarCuenta(String dni) {
 		Usuario usBuscar = new Usuario(dni);
 		Collections.sort(listaUsuarios);
 		return Collections.binarySearch(listaUsuarios,usBuscar);
 	}
 	/*
+	 * Menu usuario
+	 */
+	public static void menuUsuario(){
+		System.out.println("Bienvenido " + "¿Que desea realizar?");
+		System.out.println("1---> Comprar un articulo");
+		System.out.println("2--->");
+	}
+	/*
+	 * Menu admi
+	 */
+	public static void menuAdministrador() {
+		int opcionesMenu1 = 0;
+		System.out.println("Bienvenido Administrador");
+		System.out.println("1---> Añadir medios");
+		System.out.println("2---> Modificar datos de medios");
+		System.out.println("3--> Borrar medios");
+		System.out.println("Cualquier otro numero para salir");
+		
+		opcionesMenu1 = teclado.nextInt();
+		
+		switch(opcionesMenu1) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			
+		}
+
+	}
+	/*
+	 * Añadir medios
+	 */
+	public static void añadirMedios() {
+		Discos disco = new Discos();
+		Libros libro = new Libros();//Objeto de Libros
+		Revistas revista = new Revistas();
+		Peliculas pelicula = new Peliculas();
+
+		String opcionesMenu2 = "";
+		System.out.println("¿Que tipo de medio quiere añadir? ");
+		System.out.println("D--> Discos ");
+		System.out.println("L--> Libros ");
+		System.out.println("P--> Peliculas ");
+		System.out.println("R--> Revistas ");
+
+		opcionesMenu2 = teclado.next();
+		
+		switch(opcionesMenu2) {
+			case "D":
+				System.out.println("ISMN");
+				String ismn = teclado.next();
+				disco.setIsmn(ismn);
+				
+				System.out.println("Año de publicacion");
+				int anoPublicacion = teclado.nextInt();
+				disco.setAnoPublicacion(anoPublicacion);
+				
+				System.out.println("Titulo");
+				String titulo = teclado.next();
+				disco.setTitulo(titulo);
+				
+				System.out.println("Interprete");
+				String interprete = teclado.next();
+				disco.setInterprete(interprete);
+				
+				System.out.println("Estilo");
+				String estilo = teclado.next();
+				disco.setEstilo(estilo);
+				
+				System.out.println("Canciones con formato " + "Ej: Cancion-Cancion" );
+				String canciones = teclado.next();
+				disco.setCanciones(canciones);
+				
+				System.out.println("Sporte");
+				String soporte = teclado.next();
+				disco.setSoporte(soporte);
+				
+				System.out.println("Numero de registro");
+				int numRegistro = teclado.nextInt();
+				disco.setNumRegistro(numRegistro);
+				
+				System.out.println("Fecha de adquisicion, con formato DD/MM/YYYY");
+				String fechaAdquisicion = teclado.next();
+				disco.setFechaAdquisicion(fechaAdquisicion);
+				
+				System.out.println("Precio de compra");
+				double precioCompra = teclado.nextDouble();
+				disco.setPrecioCompra(precioCompra);
+				System.out.println("...disco agregado");
+				break;
+				
+			case "L":
+				System.out.println("ISBM");
+				String isbm = teclado.next();
+				libro.setIsbm(isbm);
+				
+				System.out.println("Año de publicacion");
+				int annoPublicacion = teclado.nextInt();
+				libro.setAnoPublicacion(annoPublicacion);
+				
+				System.out.println("Numero de pagina");
+				int numPagina = teclado.nextInt();
+				libro.setNumPaginas(numPagina);
+				
+				System.out.println("Titulo");
+				String tituloLibro = teclado.next();
+				libro.setTitulo(tituloLibro);
+				
+				System.out.println("Tematica");
+				String tematica = teclado.next();
+				libro.setTematica(tematica);
+				
+				System.out.println("Indice");
+				String indice = teclado.next();
+				libro.setIndice(indice);
+				
+				System.out.println("Autor");
+				String autor = teclado.next();
+				libro.setAutor(autor);
+				
+				System.out.println("Numero de registro");
+				int numRegistroLibro = teclado.nextInt();
+				libro.setNumRegistro(numRegistroLibro);
+				
+				System.out.println("Fecha de adquisicion, con formato DD/MM/YYYY");
+				String fechaAdquisicionLibro = teclado.next();
+				disco.setFechaAdquisicion(fechaAdquisicionLibro);
+				
+				System.out.println("Precio de compra");
+				double precioCompraLibro = teclado.nextDouble();
+				disco.setPrecioCompra(precioCompraLibro);
+				System.out.println("...libro agregado");				
+				break;
+				
+			case "P":
+				System.out.println("ISAM");
+				String isam = teclado.next();
+				pelicula.setIsan(isam);
+				
+				System.out.println("Año de publicacion");
+				int anoPublicacionPelicula = teclado.nextInt();
+				pelicula.setAnoPublicacion(anoPublicacionPelicula);
+				
+				System.out.println("Titulo");
+				String tituloPelicula = teclado.next();
+				pelicula.setTitulo(tituloPelicula);
+				
+				System.out.println("Soporte");
+				String soportePelicula = teclado.next();
+				pelicula.setSoporte(soportePelicula);
+				
+				System.out.println("Protagonista");
+				String protagonista = teclado.next();
+				pelicula.setProtagonista(protagonista);
+				
+				System.out.println("Estilo");
+				String estiloPelicula = teclado.next();
+				pelicula.setEstilo(estiloPelicula);
+				
+				System.out.println("Duracion");
+				String duracion = teclado.next();
+				pelicula.setDuracion(duracion);
+				
+				System.out.println("Numero de registro");
+				int numRegistroPelicula = teclado.nextInt();
+				pelicula.setNumRegistro(numRegistroPelicula);
+				
+				System.out.println("Fecha de adquisicion, con formato DD/MM/YYYY");
+				String fechaAdquisicionPelicula = teclado.next();
+				pelicula.setFechaAdquisicion(fechaAdquisicionPelicula);
+				
+				System.out.println("Precio de compra");
+				double precioCompraPelicula = teclado.nextDouble();
+				pelicula.setPrecioCompra(precioCompraPelicula);
+				System.out.println("...pelicula agregada");	
+				break;
+				
+			case "R":
+				System.out.println("Año de publicacion");
+				int annoRevista = teclado.nextInt();
+				revista.setAnoPublicacion(annoRevista);
+				
+				System.out.println("Numero de pagina");
+				int numPaginaRevista = teclado.nextInt();
+				revista.setNumPaginas(numPaginaRevista);
+				
+				System.out.println("Titulo");
+				String tituloRevista = teclado.next();
+				revista.setTitulo(tituloRevista);
+				
+				System.out.println("Numero de registro");
+				int numRegistroRevista = teclado.nextInt();
+				revista.setNumRegistro(numRegistroRevista);
+				
+				System.out.println("Fecha de adquisicion, con formato DD/MM/YYYY");
+				String fechaAdquisicionRevista = teclado.next();
+				revista.setFechaAdquisicion(fechaAdquisicionRevista);
+				
+				System.out.println("Precio de compra");
+				double precioCompraRevista = teclado.nextDouble();
+				revista.setPrecioCompra(precioCompraRevista);
+				System.out.println("...revista agregada");	
+				break;
+			
+			case "C":
+				App.menuApp();
+				
+
+				
+		}
+
+
+
+	}
+	/*
 	 * Menu de la aplicacion
 	 * 
 	 */
-	public void menuApp() {
+	public static void menuApp() {
 		
 			int opcionesMenu=0;
 			do {
-				System.out.println("Bienvenidoa a la Medioteca");
-				System.out.println("Que desea realizar?" + "\n" + "1--> Creacion de cuenta \n" + "2--> Ingrese a la cuenta");
-				System.out.println("3 --> Para salir");
+				System.out.println("Bienvenidos a La Medioteca");
 				
 				recorrerLibros();
 				System.out.println();
 				recorrerDiscos();
 				System.out.println();
 				recorrerRevistas();
+				
+				System.out.println("Que desea realizar?" + "\n" + "1--> Creacion de cuenta \n" + "2--> Ingrese a la cuenta");
+				System.out.println("3--> Para salir");
 				
 				opcionesMenu = teclado.nextInt();
 				//teclado.nextLine();//Limpiamos buffer de entrada
@@ -248,15 +467,18 @@ import java.util.Scanner;
 						
 						int posicion=comprobarCuenta(dni);//Se comprueba si existe la cuenta
 						
-						if (posicion == -1) {
+						if (dni == "123") {
+							menuAdministrador();
+						}
+						else if (posicion == -1) {
 							System.out.println("Usuario No Encontrado");
 							opcionesMenu = 3;
-							//no encontrado;
+
 						}
 						else {
 							usuarioLogado=listaUsuarios.get(posicion);	
 							System.out.println("Encontrado");
-
+							menuUsuario();
 						}
 						break;
 						
@@ -265,6 +487,7 @@ import java.util.Scanner;
 						}
 					}
 			while ((opcionesMenu==1)||(opcionesMenu==2));
+			System.out.println("Vuelva pronto");
 		}
 }
 
