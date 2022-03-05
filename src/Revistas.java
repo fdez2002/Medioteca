@@ -4,7 +4,7 @@ public class Revistas extends Medios {
 	 * Atributos
 	 * 
 	 */
-	int isbm;
+	String isbm;
 	int anoPublicacion;
 	int numPaginas;
 	String titulo;
@@ -17,8 +17,8 @@ public class Revistas extends Medios {
 	/*
 	 * Constructor con parametros
 	 */
-	public Revistas(int isbm, int anoPublicacion, int numPaginas, String titulo, String tematica, String indice, 
-			int numRegistro, int fechaAdquisiscion, float precioCompra) {
+	public Revistas(String isbm, int anoPublicacion, int numPaginas, String titulo, String tematica, String indice, 
+			int numRegistro, String fechaAdquisiscion, double precioCompra) {
 				super(numRegistro, fechaAdquisiscion, precioCompra);
 			
 		this.isbm = isbm;
@@ -31,13 +31,13 @@ public class Revistas extends Medios {
 	/**
 	 * @return the isbm
 	 */
-	public int getIsbm() {
+	public String getIsbm() {
 		return isbm;
 	}
 	/**
 	 * @param isbm the isbm to set
 	 */
-	public void setIsbm(int isbm) {
+	public void setIsbm(String isbm) {
 		this.isbm = isbm;
 	}
 	/**
@@ -99,6 +99,12 @@ public class Revistas extends Medios {
 	 */
 	public void setIndice(String indice) {
 		this.indice = indice;
+	}
+	@Override
+	public String toString(){
+		return "Revistas disponibles" + "\n" + "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm;
+		
 	}
 	
 }

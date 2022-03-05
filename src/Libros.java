@@ -4,7 +4,7 @@ public class Libros extends Medios {
 	 * Atribustos
 	 * 
 	 */
-	protected int isbm;
+	protected String isbm;
 	protected int anoPublicacion;
 	protected int numPaginas;
 	protected String titulo;
@@ -22,8 +22,8 @@ public class Libros extends Medios {
 	/*
 	 * Constructor con parametros
 	 */
-	public Libros(int isbm, int anoPublicacion, int numPaginas, String titulo, String tematica, String indice, String autor,
-			int numRegistro, int fechaAdquisiscion, float precioCompra) {
+	public Libros(String isbm, int anoPublicacion, int numPaginas, String titulo, String tematica, String indice, String autor,
+			int numRegistro, String fechaAdquisiscion, float precioCompra) {
 				super(numRegistro, fechaAdquisiscion, precioCompra);
 		this.isbm = isbm;
 		this.anoPublicacion = anoPublicacion;
@@ -36,13 +36,13 @@ public class Libros extends Medios {
 	/**
 	 * @return the isbm
 	 */
-	public int getIsbm() {
+	public String getIsbm() {
 		return isbm;
 	}
 	/**
 	 * @param isbm the isbm to set
 	 */
-	public void setIsbm(int isbm) {
+	public void setIsbm(String isbm) {
 		this.isbm = isbm;
 	}
 	/**
@@ -116,6 +116,12 @@ public class Libros extends Medios {
 	 */
 	public void setAutor(String autor) {
 		this.autor = autor;
+	}
+	@Override
+	public String toString(){
+		return "Libros disponibles" + "\n" + "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "Autor" + autor + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm;
+		
 	}
 	
 

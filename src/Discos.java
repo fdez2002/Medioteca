@@ -4,7 +4,7 @@ public class Discos extends Medios {
 	 * Atributos
 	 * 
 	 */
-	protected int ismn;
+	protected String ismn;
 	protected int anoPublicacion;
 	protected String titulo;
 	protected String interprete;
@@ -23,8 +23,8 @@ public class Discos extends Medios {
 	 * Constructor con parametros
 	 * 
 	 */
-	public Discos(int ismn, int anoPublicacion, String titulo, String interprete, String estilo, String canciones, String soporte,
-			int numRegistro, int fechaAdquisiscion, float precioCompra) {
+	public Discos(String ismn, int anoPublicacion, String titulo, String interprete, String estilo, String canciones, String soporte,
+			int numRegistro, String fechaAdquisiscion, double precioCompra) {
 				super(numRegistro, fechaAdquisiscion, precioCompra);
 
 		this.ismn = ismn;
@@ -39,13 +39,13 @@ public class Discos extends Medios {
 	/**
 	 * @return the ismn
 	 */
-	public int getIsmn() {
+	public String getIsmn() {
 		return ismn;
 	}
 	/**
 	 * @param ismn the ismn to set
 	 */
-	public void setIsmn(int ismn) {
+	public void setIsmn(String ismn) {
 		this.ismn = ismn;
 	}
 	/**
@@ -119,6 +119,12 @@ public class Discos extends Medios {
 	 */
 	public void setSoporte(String soporte) {
 		this.soporte = soporte;
+	}
+	@Override
+	public String toString(){
+		return "Discos disponibles" + "\n" + "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+											+ "Cnciones: " + canciones + "\n" + "Soporte: " + soporte + "\n" + "ISMN: " + ismn;
+		
 	}
 	
 

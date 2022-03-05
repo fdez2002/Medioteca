@@ -5,8 +5,8 @@ public abstract class Medios {
 	 * Atributos
 	 */
 	protected int numRegistro;
-	protected int fechaAdquisicion;
-	protected float precioCompra;
+	protected String fechaAdquisicion;
+	protected double precioCompra;
 	
 	/*
 	 * Constructor sin parametros
@@ -18,7 +18,7 @@ public abstract class Medios {
 	 * Constructor con parámetros
 	 * 
 	 */
-	public Medios (int numRegistro, int fechaAdquisicion, float precioCompra) {
+	public Medios (int numRegistro, String fechaAdquisicion, double precioCompra) {
 		this.numRegistro = numRegistro;
 		this.fechaAdquisicion = fechaAdquisicion;
 		this.precioCompra = precioCompra;
@@ -41,28 +41,28 @@ public abstract class Medios {
 	/**
 	 * @return the fechaAdquisicion
 	 */
-	public int getFechaAdquisicion() {
+	public String getFechaAdquisicion() {
 		return fechaAdquisicion;
 	}
 
 	/**
 	 * @param fechaAdquisicion the fechaAdquisicion to set
 	 */
-	public void setFechaAdquisicion(int fechaAdquisicion) {
+	public void setFechaAdquisicion(String fechaAdquisicion) {
 		this.fechaAdquisicion = fechaAdquisicion;
 	}
 
 	/**
 	 * @return the precioCompra
 	 */
-	public float getPrecioCompra() {
+	public double getPrecioCompra() {
 		return precioCompra;
 	}
 
 	/**
 	 * @param precioCompra the precioCompra to set
 	 */
-	public void setPrecioCompra(float precioCompra) {
+	public void setPrecioCompra(double precioCompra) {
 		this.precioCompra = precioCompra;
 	}
 	

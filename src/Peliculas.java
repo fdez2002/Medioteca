@@ -4,7 +4,7 @@ public class Peliculas extends Medios {
 	 * Atributos
 	 * 
 	 */
-	protected int isan;
+	protected String isan;
 	protected int anoPublicacion;
 	protected String titulo;
 	protected String director;
@@ -21,8 +21,8 @@ public class Peliculas extends Medios {
 	/*Constructor con parametros
 	 * 
 	 */
-	public Peliculas(int isan, int anoPublicacion, String titulo, String director, String soporte, String protagonista, String estilo, String duracion,
-			int numRegistro, int fechaAdquisiscion, float precioCompra) {
+	public Peliculas(String isan, int anoPublicacion, String titulo, String director, String soporte, String protagonista, String estilo, String duracion,
+			int numRegistro, String fechaAdquisiscion, double precioCompra) {
 				super(numRegistro, fechaAdquisiscion, precioCompra);
 				
 		this.isan = isan;
@@ -37,13 +37,13 @@ public class Peliculas extends Medios {
 	/**
 	 * @return the isan
 	 */
-	public int getIsan() {
+	public String getIsan() {
 		return isan;
 	}
 	/**
 	 * @param isan the isan to set
 	 */
-	public void setIsan(int isan) {
+	public void setIsan(String isan) {
 		this.isan = isan;
 	}
 	/**
@@ -129,6 +129,16 @@ public class Peliculas extends Medios {
 	 */
 	public void setDuracion(String duracion) {
 		this.duracion = duracion;
+	}
+	/*
+	 * 
+	 */
+	@Override
+	public String toString(){
+		return "Peliculas disponibles" + "\n" + "Titulo: " + titulo + "\n" + "Director: " + director + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+											+ "Duracion: " + duracion + "\n" + "Estilo: " + estilo + "\n" + "Protagonista: " + protagonista + "\n" + "Soporte: " + soporte
+												+ "ISAN :" + isan;
+		
 	}
 
 

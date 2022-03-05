@@ -8,6 +8,10 @@ import java.util.Scanner;
 	public class App {
 	
 	public ArrayList<Usuario> listaUsuarios;//Array de usuarios
+	public ArrayList<Libros> listaLibros;//Array de libros
+	public ArrayList<Discos> listaDiscos;//Array de discos
+	public ArrayList<Revistas> listaRevistas;//Array de revistas
+	public ArrayList<Peliculas> listaPeliculas;//Array de peliculas
 
 	public Usuario usuarioLogado = new Usuario();//Objeto de usuarios
 	
@@ -19,13 +23,30 @@ import java.util.Scanner;
 	
 	listaUsuarios = new ArrayList<Usuario>(); // ArrayList de usuarios
 
-	listaUsuarios.add(new Usuario("36520460B", "Antonio", "Fernandez", "Villa", 20));
+	listaUsuarios.add(new Usuario("36520460B", "Antonio", "Fernandez", "Villa", 20));//Usuario 1
 	
-	listaUsuarios.add(new Usuario("26520460B", "Julia", "Perez", "Garrido", 16));
+	listaUsuarios.add(new Usuario("26520460B", "Julia", "Perez", "Garrido", 16));//Usuario 2
 	
-	listaUsuarios.add(new Usuario("56520460B", "Juan", "Baena", "Valcarcel", 45));
+	listaUsuarios.add(new Usuario("56520460B", "Juan", "Baena", "Valcarcel", 45));//Usuario 3
 	
-	listaUsuarios.add(new Usuario("66520460B", "Sara", "Peñafiel", "Diaz", 20));
+	listaUsuarios.add(new Usuario("66520460B", "Sara", "Peñafiel", "Diaz", 20));//Usuario 4
+	
+	//listaLibros = new Arraylist<Libros>();
+	listaLibros.add(new Libros("9788492719129", 1555, 209, "El lazarillo", "Moral", "Indice", "Desconocido", 209, "12/02/2009", 8));//Libro 1
+	listaLibros.add(new Libros("8788492719129", 1605, 179, "Don quijote", "Comedia", "Indice", "Miguel De Cervantes", 309, "13/02/2009", 10));//Libro 1
+	listaLibros.add(new Libros("7788492719129", 1555, 309, "El arte de la guerra", "Drama", "Indice", "Raul Checheno", 189, "14/02/2009", 5));//Libro 1
+	
+	listaDiscos.add(new Discos("12345678910111213", 1991, "Nevermind", "Nirvana", "Rock", "Cancion1-Cancion2", "CD", 577, "12/08/2019", 5.2));//Disco 1
+	listaDiscos.add(new Discos("22345678910111213", 1996, "Ramours", "Fleetwood", "Rock", "Cancion1-Cancion2", "CD", 568, "13/08/2019", 9.2));//Disco 2
+	listaDiscos.add(new Discos("32345678910111213", 1999, "Revolver", "The Beatles", "Rock", "Cancion1-Cancion2", "CD", 577, "14/08/2019", 7.2));//Disco 3
+	
+	listaRevistas.add(new Revistas("0788492719129", 2018, 309, "Revista 1", "Humor", "Indice", 429, "24/02/2009", 7.3));//Revistas 1
+	listaRevistas.add(new Revistas("4788492719129", 2020, 409, "Revista 2", "Noticias", "Indice", 729, "24/02/2009", 4.3));//Revistas 2
+	listaRevistas.add(new Revistas("6788492719129", 2021, 509, "Revista 3", "Pemas", "Indice", 829, "24/02/2009", 9.3));//Revistas 3
+	
+	listaPeliculas.add(new Peliculas("52345678910111213", 2001, "Titanic", "Juan", "CD", "Protagonista1", "Amor", "1:29", 409, "12/04/2021", 1.2));//Pelicula 1
+	listaPeliculas.add(new Peliculas("52345678910111213", 2011, "Titanic2", "Juan2", "CD", "Protagonista2", "Amor2", "1:23", 609, "13/04/2021", 4.2));//Pelicula 2
+	listaPeliculas.add(new Peliculas("52345678910111213", 2021, "Titanic3", "Juan3", "CD", "Protagonista3", "Amor3", "1:24", 239, "14/04/2021", 2.2));//Pelicula 3
 	
 	}
 	
