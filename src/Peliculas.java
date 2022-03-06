@@ -139,7 +139,17 @@ public class Peliculas extends Medios {
 											+ "Duracion: " + duracion + "\n" + "Estilo: " + estilo + "\n" + "Protagonista: " + protagonista + "\n" + "Soporte: " + soporte
 												+ "ISAN :" + isan;
 		
+		
 	}
+	public String toStringAdmin(){
+		return  "Titulo: " + titulo + "\n" + "Director: " + director + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+											+ "Duracion: " + duracion + "\n" + "Estilo: " + estilo + "\n" + "Protagonista: " + protagonista + "\n" + "Soporte: " + soporte
+												+ "ISAN :" + isan + "\n" + "Numero de registro: " +  numRegistro
+												+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra" + precioCompra;
+		
+		
+	}
+	
 
 
 }

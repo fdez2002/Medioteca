@@ -126,6 +126,13 @@ public class Discos extends Medios {
 											+ "Cnciones: " + canciones + "\n" + "Soporte: " + soporte + "\n" + "ISMN: " + ismn;
 		
 	}
+	public String toStringAdmin(){
+		return "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+											+ "Cnciones: " + canciones + "\n" + "Soporte: " + soporte + "\n" + "ISMN: " + ismn + "\n" + "Numero de registro: " +  numRegistro
+												+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra" + precioCompra;
+		
+	}
+	
 	
 
 }

@@ -33,23 +33,30 @@ import java.util.Scanner;
 	listaUsuarios.add(new Usuario("66520460B", "Sara", "Peñafiel", "Diaz", 20));//Usuario 4
 	
 	//listaLibros = new Arraylist<Libros>();
-	listaLibros.add(new Libros("9788492719129", 1555, 209, "El lazarillo", "Moral", "Indice", "Desconocido", 209, "12/02/2009", 8));//Libro 1
-	listaLibros.add(new Libros("8788492719129", 1605, 179, "Don quijote", "Comedia", "Indice", "Miguel De Cervantes", 309, "13/02/2009", 10));//Libro 1
-	listaLibros.add(new Libros("7788492719129", 1555, 309, "El arte de la guerra", "Drama", "Indice", "Raul Checheno", 189, "14/02/2009", 5));//Libro 1
+	listaLibros.add(0,new Libros("9788492719129", 1555, 209, "El lazarillo", "Moral", "Indice", "Desconocido", 209, "12/02/2009", 8));//Libro 1
+	listaLibros.add(1,new Libros("8788492719129", 1605, 179, "Don quijote", "Comedia", "Indice", "Miguel De Cervantes", 309, "13/02/2009", 10));//Libro 1
+	listaLibros.add(2,new Libros("7788492719129", 1555, 309, "El arte de la guerra", "Drama", "Indice", "Raul Checheno", 189, "14/02/2009", 5));//Libro 1
 	
-	listaDiscos.add(new Discos("12345678910111213", 1991, "Nevermind", "Nirvana", "Rock", "Cancion1-Cancion2", "CD", 577, "12/08/2019", 5.2));//Disco 1
-	listaDiscos.add(new Discos("22345678910111213", 1996, "Ramours", "Fleetwood", "Rock", "Cancion1-Cancion2", "CD", 568, "13/08/2019", 9.2));//Disco 2
-	listaDiscos.add(new Discos("32345678910111213", 1999, "Revolver", "The Beatles", "Rock", "Cancion1-Cancion2", "CD", 577, "14/08/2019", 7.2));//Disco 3
+	listaDiscos.add(0,new Discos("12345678910111213", 1991, "Nevermind", "Nirvana", "Rock", "Cancion1-Cancion2", "CD", 235, "12/08/2019", 5.2));//Disco 1
+	listaDiscos.add(1,new Discos("22345678910111213", 1996, "Ramours", "Fleetwood", "Rock", "Cancion1-Cancion2", "CD", 568, "13/08/2019", 9.2));//Disco 2
+	listaDiscos.add(2,new Discos("32345678910111213", 1999, "Revolver", "The Beatles", "Rock", "Cancion1-Cancion2", "CD", 577, "14/08/2019", 7.2));//Disco 3
 	
-	listaRevistas.add(new Revistas("0788492719129", 2018, 309, "Revista 1", "Humor", "Indice", 429, "24/02/2009", 7.3));//Revistas 1
-	listaRevistas.add(new Revistas("4788492719129", 2020, 409, "Revista 2", "Noticias", "Indice", 729, "24/02/2009", 4.3));//Revistas 2
-	listaRevistas.add(new Revistas("6788492719129", 2021, 509, "Revista 3", "Pemas", "Indice", 829, "24/02/2009", 9.3));//Revistas 3
+	listaRevistas.add(0,new Revistas("0788492719129", 2018, 309, "Revista 1", "Humor", "Indice", 429, "24/02/2009", 7.3));//Revistas 1
+	listaRevistas.add(1,new Revistas("4788492719129", 2020, 409, "Revista 2", "Noticias", "Indice", 220, "24/02/2009", 4.3));//Revistas 2
+	listaRevistas.add(2,new Revistas("6788492719129", 2021, 509, "Revista 3", "Pemas", "Indice", 829, "24/02/2009", 9.3));//Revistas 3
 	
-	listaPeliculas.add(new Peliculas("52345678910111213", 2001, "Titanic", "Juan", "CD", "Protagonista1", "Amor", "1:29", 409, "12/04/2021", 1.2));//Pelicula 1
-	listaPeliculas.add(new Peliculas("52345678910111213", 2011, "Titanic2", "Juan2", "CD", "Protagonista2", "Amor2", "1:23", 609, "13/04/2021", 4.2));//Pelicula 2
-	listaPeliculas.add(new Peliculas("52345678910111213", 2021, "Titanic3", "Juan3", "CD", "Protagonista3", "Amor3", "1:24", 239, "14/04/2021", 2.2));//Pelicula 3
+	listaPeliculas.add(0,new Peliculas("52345678910111213", 2001, "Titanic", "Juan", "CD", "Protagonista1", "Amor", "1:29", 409, "12/04/2021", 1.2));//Pelicula 1
+	listaPeliculas.add(1,new Peliculas("52345678910111213", 2011, "Titanic2", "Juan2", "CD", "Protagonista2", "Amor2", "1:23", 609, "13/04/2021", 4.2));//Pelicula 2
+	listaPeliculas.add(2,new Peliculas("52345678910111213", 2021, "Titanic3", "Juan3", "CD", "Protagonista3", "Amor3", "1:24", 239, "14/04/2021", 2.2));//Pelicula 3
 	
 	}
+	public static  Libros obtenerLibro(int i) {
+		
+		return listaLibros.get(i);
+	}
+	/*
+	 * 
+	 */
 	public static void recorrerLibros() {
 		System.out.println(" ------------------");
 		System.out.println("|Libros Disponibles|");
@@ -82,6 +89,69 @@ import java.util.Scanner;
 		for(Revistas revista : listaRevistas) {
 			System.out.println("---------------------------------------------------------------");
 		    System.out.println(revista.toString());
+			System.out.println("---------------------------------------------------------------");
+
+		}
+	}
+	public static void recorrerPeliculas() {
+		System.out.println(" ------------------");
+		System.out.println("|Peliculas Disponibles|");
+		System.out.println(" ------------------");
+
+		for(Peliculas pelicula : listaPeliculas) {
+			System.out.println("---------------------------------------------------------------");
+		    System.out.println(pelicula.toString());
+			System.out.println("---------------------------------------------------------------");
+
+		}
+	}
+	/*
+	 * Recorrer Administrador
+	 */
+	public static void recorrerLibrosAdmin() {
+		System.out.println(" ------------------");
+		System.out.println("|Libros Disponibles|");
+		System.out.println(" ------------------");
+
+		for(Libros libro : listaLibros) {
+			System.out.println("---------------------------------------------------------------");
+		    System.out.println(libro.toStringAdmin());
+			System.out.println("---------------------------------------------------------------");
+
+		}
+	}
+	public static void recorrerDiscosAdmin() {
+		System.out.println(" ------------------");
+		System.out.println("|Discos Disponibles|");
+		System.out.println(" ------------------");
+
+		for(Discos disco : listaDiscos) {
+			System.out.println("---------------------------------------------------------------");
+		    System.out.println(disco.toStringAdmin());
+			System.out.println("---------------------------------------------------------------");
+
+		}
+	}
+	public static void recorrerRevistasAdmin() {
+		System.out.println(" ------------------");
+		System.out.println("|Revistas Disponibles|");
+		System.out.println(" ------------------");
+
+		for(Revistas revista : listaRevistas) {
+			System.out.println("---------------------------------------------------------------");
+		    System.out.println(revista.toStringAdmin());
+			System.out.println("---------------------------------------------------------------");
+
+		}
+	}
+	public static void recorrerPeliculasAdmin() {
+		System.out.println(" ------------------");
+		System.out.println("|Peliculas Disponibles|");
+		System.out.println(" ------------------");
+
+		for(Peliculas pelicula : listaPeliculas) {
+			System.out.println("---------------------------------------------------------------");
+		    System.out.println(pelicula.toStringAdmin());
 			System.out.println("---------------------------------------------------------------");
 
 		}
@@ -214,38 +284,7 @@ import java.util.Scanner;
 		Collections.sort(listaUsuarios);
 		return Collections.binarySearch(listaUsuarios,usBuscar);
 	}
-	/*
-	 * Menu usuario
-	 */
-	public static void menuUsuario(){
-		System.out.println("Bienvenido " + "¿Que desea realizar?");
-		System.out.println("1---> Comprar un articulo");
-		System.out.println("2--->");
-	}
-	/*
-	 * Menu admi
-	 */
-	public static void menuAdministrador() {
-		int opcionesMenu1 = 0;
-		System.out.println("Bienvenido Administrador");
-		System.out.println("1---> Añadir medios");
-		System.out.println("2---> Modificar datos de medios");
-		System.out.println("3--> Borrar medios");
-		System.out.println("Cualquier otro numero para salir");
-		
-		opcionesMenu1 = teclado.nextInt();
-		
-		switch(opcionesMenu1) {
-			case 1:
-				break;
-			case 2:
-				break;
-			case 3:
-				break;
-			
-		}
-
-	}
+	
 	/*
 	 * Añadir medios
 	 */
@@ -305,6 +344,7 @@ import java.util.Scanner;
 				System.out.println("Precio de compra");
 				double precioCompra = teclado.nextDouble();
 				disco.setPrecioCompra(precioCompra);
+				listaDiscos.add(disco);
 				System.out.println("...disco agregado");
 				break;
 				
@@ -348,6 +388,7 @@ import java.util.Scanner;
 				System.out.println("Precio de compra");
 				double precioCompraLibro = teclado.nextDouble();
 				disco.setPrecioCompra(precioCompraLibro);
+				listaLibros.add(libro);
 				System.out.println("...libro agregado");				
 				break;
 				
@@ -391,6 +432,7 @@ import java.util.Scanner;
 				System.out.println("Precio de compra");
 				double precioCompraPelicula = teclado.nextDouble();
 				pelicula.setPrecioCompra(precioCompraPelicula);
+				listaPeliculas.add(pelicula);
 				System.out.println("...pelicula agregada");	
 				break;
 				
@@ -418,27 +460,129 @@ import java.util.Scanner;
 				System.out.println("Precio de compra");
 				double precioCompraRevista = teclado.nextDouble();
 				revista.setPrecioCompra(precioCompraRevista);
+				listaRevistas.add(revista);
 				System.out.println("...revista agregada");	
 				break;
 			
-			case "C":
-				App.menuApp();
-				
-
+			
 				
 		}
+		menuAdministrador();
+		
+	}
 
+	/*
+	 * Borrar medios
+	 */
+	public static void  borrarMedios() {
+		String opcionesMenu3 = "";
+		System.out.println("¿Que tipo de medio quiere eliminar? ");
+		System.out.println("D--> Discos ");
+		System.out.println("L--> Libros ");
+		System.out.println("P--> Peliculas ");
+		System.out.println("R--> Revistas ");
 
+		opcionesMenu3 = teclado.next();
+		switch(opcionesMenu3){
+			case "D":
+				recorrerDiscosAdmin();
+				int indiceDisco = 0;
+				System.out.println("Por favor, indique el numero de registro ");
+				int numeroRegistro = teclado.nextInt();
 
+				for(int i = 0; i < listaDiscos.size(); i++) {
+					if(listaDiscos.get(i).getNumRegistro() == numeroRegistro) {
+						indiceDisco = i;
+					}else {
+						System.out.println("No existe");
+					}
+					listaDiscos.remove(indiceDisco);
+				}
+				
+				break;
+			case "L":
+				recorrerLibrosAdmin();
+				System.out.println("Por favor, idique el numero de registro ");
+				//int numRegistroLibro = teclado.nextInt();
+				//int indiceLibro = listaLibros.indexOf(numRegistroLibro);
+				//listaLibros.remove(indiceLibro);
+				break;
+			case "P":
+				recorrerPeliculasAdmin();
+				System.out.println("Por favor, idique el numero de registro ");
+				//int numRegistroPelicula = teclado.nextInt();
+				//int indicePelicula = listaPeliculas.indexOf(numRegistroPelicula);
+				//listaPeliculas.remove(indicePelicula);
+				break;
+			case "R":
+				recorrerRevistasAdmin();
+				System.out.println("Por favor, idique el numero de registro ");
+				//int numRegistroRevista = teclado.nextInt();
+				//int indiceRevista = listaRevistas.indexOf(numRegistroRevista);
+				//listaRevistas.remove(indiceRevista);
+				break;
+				
+		}
+		System.out.println("...medio eliminado");	
+		menuAdministrador();
+	}
+	public static void modificarMedios() {
+		System.out.println("¿Que tipo de medio quiere añadir? ");
+		System.out.println("D--> Discos ");
+		System.out.println("L--> Libros ");
+		System.out.println("P--> Peliculas ");
+		System.out.println("R--> Revistas ");
+		String opcionesMenu4 = teclado.next();
+		switch(opcionesMenu4){
+			case "D":
+				recorrerDiscosAdmin();
+				
+				break;
+		}
+	}
+	/*
+	 * Menu admin
+	 */
+	public static void menuAdministrador() {
+		int opcionesMenu1;
+		System.out.println("Bienvenido Administrador");
+		System.out.println("1---> Añadir medios");
+		System.out.println("2---> Modificar datos de medios");
+		System.out.println("3--> Borrar medios");
+		System.out.println("Cualquier otro numero para salir");
+		
+		opcionesMenu1 = teclado.nextInt();
+		
+		switch(opcionesMenu1) {
+			case 1:
+				añadirMedios();
+				break;
+			case 2:
+				modificarMedios();
+				break;
+			case 3:
+				borrarMedios();
+				break;
+			
+		}
+
+	}
+	/*
+	 * Menu usuario
+	 */
+	public static void menuUsuario(){
+		System.out.println("Bienvenido " + "¿Que desea realizar?");
+		System.out.println("1---> Comprar un articulo");
+		System.out.println("2---> Enviar un articulo");
 	}
 	/*
 	 * Menu de la aplicacion
 	 * 
 	 */
-	public static void menuApp() {
+	public void menuApp() {
 		
 			int opcionesMenu=0;
-			do {
+			//do {
 				System.out.println("Bienvenidos a La Medioteca");
 				
 				recorrerLibros();
@@ -446,6 +590,8 @@ import java.util.Scanner;
 				recorrerDiscos();
 				System.out.println();
 				recorrerRevistas();
+				System.out.println();
+				recorrerPeliculas();
 				
 				System.out.println("Que desea realizar?" + "\n" + "1--> Creacion de cuenta \n" + "2--> Ingrese a la cuenta");
 				System.out.println("3--> Para salir");
@@ -464,30 +610,29 @@ import java.util.Scanner;
 					case 2:
 						System.out.println("Ingrese su DNI");
 						String dni = teclado.next();
-						
 						int posicion=comprobarCuenta(dni);//Se comprueba si existe la cuenta
 						
-						if (dni == "123") {
+						if (dni == "66520460B") {
 							menuAdministrador();
 						}
 						else if (posicion == -1) {
 							System.out.println("Usuario No Encontrado");
-							opcionesMenu = 3;
-
+							menuApp();
+							//opcionesMenu = 3;
 						}
 						else {
 							usuarioLogado=listaUsuarios.get(posicion);	
 							System.out.println("Encontrado");
-							menuUsuario();
+							//menuUsuario();
+							menuAdministrador();
+
 						}
 						break;
-						
-						
-								
+							
 						}
-					}
-			while ((opcionesMenu==1)||(opcionesMenu==2));
-			System.out.println("Vuelva pronto");
+					//}
+			//while ((opcionesMenu==1)||(opcionesMenu==2));
+			//System.out.println("Vuelva pronto");
 		}
 }
 
