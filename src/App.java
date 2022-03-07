@@ -477,60 +477,128 @@ import java.util.Scanner;
 		menuAdministrador();
 		
 	}
-	public static int encontrarPosicionDiscos(){
+	public static boolean encontrarPosicionDiscos(int numeroRegistro ){
+		boolean indice = false;
+		int i;
+		
+		for(i = 0; i < listaDiscos.size(); i++) {
+			if(listaDiscos.get(i).getNumRegistro() == numeroRegistro) {
+				return true;
+
+			}else {
+				
+			}
+		}
+
+		return indice;
+	}
+	public static int posicionDiscos(int numeroRegistro ){
+		
 		int indice = 0;
-		System.out.println("Por favor, idique el numero de registro el disco ");
-		int numeroRegistro = teclado.nextInt();
 		for(int i = 0; i < listaDiscos.size(); i++) {
 			if(listaDiscos.get(i).getNumRegistro() == numeroRegistro) {
 				indice = i;
 			}else {
-				System.out.println("Medio no encontrado");
-				menuAdministrador();
 			}
 		}
 		return indice;
 	}
-	public static int  encontrarPosicionLibros(){
-		int indice = 0;
-		System.out.println("Por favor, idique el numero de registro del libro ");
-		int numeroRegistro = teclado.nextInt();
-		for(int i = 0; i < listaDiscos.size(); i++) {
-			if(listaDiscos.get(i).getNumRegistro() == numeroRegistro) {
-				indice = i;
+	/*
+	 * 
+	 */
+
+	public static boolean  encontrarPosicionLibros(int numeroRegistro){
+		boolean indice = false;
+		int i;
+		
+		for(i = 0; i < listaLibros.size(); i++) {
+			if(listaLibros.get(i).getNumRegistro() == numeroRegistro) {
+				return true;
+
 			}else {
-				System.out.println("Medio no encontrado");
-				menuAdministrador();
+				
 			}
 		}
+
 		return indice;
 	}
-	public static int  encontrarPosicionPeliculas(){
+	public static int posicionLibros(int numeroRegistro ){
 		int indice = 0;
-		System.out.println("Por favor, idique el numero de registro de la pelicula ");
-		int numeroRegistro = teclado.nextInt();
-		for(int i = 0; i < listaDiscos.size(); i++) {
-			if(listaDiscos.get(i).getNumRegistro() == numeroRegistro) {
-				indice = i;
-			}else {
-				System.out.println("Medio no encontrado");
-				menuAdministrador();
+
+		if(encontrarPosicionDiscos(numeroRegistro) == true) {
+			for(int i = 0; i < listaLibros.size(); i++) {
+				if(listaLibros.get(i).getNumRegistro() == numeroRegistro) {
+					indice = i;
+
+				} 
 			}
-		}
+		}else {
+			}
 		return indice;
 	}
-	public static int  encontrarPosicionRevistas(){
-		int indice = 0;
-		System.out.println("Por favor, idique el numero de registro de la revista ");
-		int numeroRegistro = teclado.nextInt();
-		for(int i = 0; i < listaDiscos.size(); i++) {
-			if(listaDiscos.get(i).getNumRegistro() == numeroRegistro) {
-				indice = i;
+	/*
+	 * 
+	 */
+	
+	public static boolean  encontrarPosicionPeliculas(int numeroRegistro){
+		boolean indice = false;
+		int i;
+		
+		for(i = 0; i < listaPeliculas.size(); i++) {
+			if(listaPeliculas.get(i).getNumRegistro() == numeroRegistro) {
+				return true;
+
 			}else {
-				System.out.println("Medio no encontrado");
-				menuAdministrador();
+				
 			}
 		}
+
+		return indice;
+	}
+	public static int posicionPeliculas(int numeroRegistro ){
+		int indice = 0;
+
+		if(encontrarPosicionDiscos(numeroRegistro) == true) {
+			for(int i = 0; i < listaPeliculas.size(); i++) {
+				if(listaPeliculas.get(i).getNumRegistro() == numeroRegistro) {
+					indice = i;
+
+				} 
+			}
+		}else {
+			}
+		return indice;
+	}
+	/*
+	 * 
+	 */
+	public static boolean  encontrarPosicionRevistas(int numeroRegistro){
+		boolean indice = false;
+		int i;
+		
+		for(i = 0; i < listaRevistas.size(); i++) {
+			if(listaRevistas.get(i).getNumRegistro() == numeroRegistro) {
+				return true;
+
+			}else {
+				
+			}
+		}
+
+		return indice;
+	}
+	public static int posicionRevistas(int numeroRegistro ){
+		int indice = 0;
+
+		if(encontrarPosicionDiscos(numeroRegistro) == true) {
+			for(int i = 0; i < listaRevistas.size(); i++) {
+				if(listaRevistas.get(i).getNumRegistro() == numeroRegistro) {
+					indice = i;
+
+				} 
+			}
+		}else {
+			}
 		return indice;
 	}
 	/*
@@ -545,38 +613,81 @@ import java.util.Scanner;
 		System.out.println("R--> Revistas ");
 
 		opcionesMenu3 = teclado.next();
-		
 		switch(opcionesMenu3){
 			case "D":
 				recorrerDiscosAdmin();
+				System.out.println("Por favor, idique el numero de registro del disco ");
+				int numeroRegistro = teclado.nextInt();
 				
-				listaDiscos.remove(encontrarPosicionDiscos());
+				encontrarPosicionDiscos(numeroRegistro);
 				
+				if (encontrarPosicionDiscos(numeroRegistro) == true) {
+						listaDiscos.remove(posicionDiscos(numeroRegistro));
+						System.out.println("...medio eliminado");	
+				}else {
+					System.out.println("medio no encontrado");	
+
+				}
+
 				break;
 			case "L":
 				recorrerLibrosAdmin();
 				
-				listaDiscos.remove(encontrarPosicionLibros());
+				System.out.println("Por favor, idique el numero de registro del disco ");
+				numeroRegistro = teclado.nextInt();
+				
+				encontrarPosicionLibros(numeroRegistro);	
+				
+				if (encontrarPosicionLibros(numeroRegistro) == true) {
+					listaDiscos.remove(posicionLibros(numeroRegistro));
+					System.out.println("...medio eliminado");	
+				}else {
+				System.out.println("medio no encontrado");	
+
+				}
+
 				break;
 			case "P":
 				recorrerPeliculasAdmin();
 				
-				listaDiscos.remove(encontrarPosicionPeliculas());
+				System.out.println("Por favor, idique el numero de registro del disco ");
+				numeroRegistro = teclado.nextInt();
+				
+				encontrarPosicionPeliculas(numeroRegistro);	
+				
+				if (encontrarPosicionPeliculas(numeroRegistro) == true) {
+					listaDiscos.remove(posicionPeliculas(numeroRegistro));
+					System.out.println("...medio eliminado");	
+				}else {
+				System.out.println("medio no encontrado");	
+
+				}
 				
 				break;
 			case "R":
 				recorrerRevistasAdmin();
 				
-				listaDiscos.remove(encontrarPosicionRevistas());
+				System.out.println("Por favor, idique el numero de registro del disco ");
+				numeroRegistro = teclado.nextInt();
+				
+				encontrarPosicionRevistas(numeroRegistro);
+				if (encontrarPosicionRevistas(numeroRegistro) == true) {
+					listaDiscos.remove(posicionRevistas(numeroRegistro));
+					System.out.println("...medio eliminado");	
+				}else {
+				System.out.println("medio no encontrado");	
+
+				}
+
 				break;
 				
 		}
-		System.out.println("...medio eliminado");	
 		menuAdministrador();
 	}
-	/*
+
+	
 	public static void modificarMedios() {
-		System.out.println("¿Que tipo de medio quiere añadir? ");
+		System.out.println("¿Que tipo de medio quiere modificar? ");
 		System.out.println("D--> Discos ");
 		System.out.println("L--> Libros ");
 		System.out.println("P--> Peliculas ");
@@ -586,18 +697,50 @@ import java.util.Scanner;
 		switch(opcionesMenu4){
 			case "D":
 				recorrerDiscosAdmin();
-				System.out.println("Por favor, indique el numero de registro que desea modificar ");
+				
+				System.out.println("Por favor, idique el numero de registro del disco ");
 				int numeroRegistro = teclado.nextInt();
-				if(encontrarPosicion(numeroRegistro) == true ) {
-					listaDiscos.remove(numeroRegistro);
-				}else {
-					System.out.println("No encontrado");
-				}
+
+				datosDisco();
+				listaDiscos.set(posicionDiscos(numeroRegistro), disco);
+				
+				menuAdministrador();
+				break;
+			case "L":
+				recorrerLibrosAdmin();
+				
+				System.out.println("Por favor, idique el numero de registro del disco ");
+				numeroRegistro = teclado.nextInt();
+
+				datosLibro();
+				listaLibros.set(posicionLibros(numeroRegistro), libro);
+				
+				menuAdministrador();
+				break;
+			case "P":
+				recorrerPeliculasAdmin();
+				
+				System.out.println("Por favor, idique el numero de registro del disco ");
+				numeroRegistro = teclado.nextInt();
+
+				datosPelicula();
+				listaPeliculas.set(posicionPeliculas(numeroRegistro), pelicula);
+				
+				menuAdministrador();
+				break;
+			case "R":
+				recorrerRevistasAdmin();
+				
+				System.out.println("Por favor, idique el numero de registro del disco ");
+				numeroRegistro = teclado.nextInt();
+
+				datosRevista();
+				listaRevistas.set(posicionRevistas(numeroRegistro), revista);
+				
 				menuAdministrador();
 				break;
 		}
 	}
-	*/
 	
 	/*
 	 * Menu admin
@@ -616,7 +759,7 @@ import java.util.Scanner;
 				añadirMedios();
 				break;
 			case 2:
-				//modificarMedios();
+				modificarMedios();
 				break;
 			case 3:
 				borrarMedios();
@@ -655,7 +798,6 @@ import java.util.Scanner;
 				System.out.println("3--> Para salir");
 				
 				opcionesMenu = teclado.nextInt();
-				//teclado.nextLine();//Limpiamos buffer de entrada
 				
 				switch(opcionesMenu) {
 				
