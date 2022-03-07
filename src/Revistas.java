@@ -110,7 +110,7 @@ public class Revistas extends Medios {
 	public String toStringAdmin(){
 		return "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm + "\n" + "Numero de registro: " +  numRegistro
-											+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra" + precioCompra;
+											+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra: " + precioCompra;
 		
 		
 	}

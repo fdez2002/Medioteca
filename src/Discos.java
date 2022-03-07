@@ -1,5 +1,5 @@
 
-public class Discos extends Medios {
+public class Discos  extends Medios{
 	/*
 	 * Atributos
 	 * 
@@ -120,6 +120,7 @@ public class Discos extends Medios {
 	public void setSoporte(String soporte) {
 		this.soporte = soporte;
 	}
+
 	@Override
 	public String toString(){
 		return "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
@@ -129,10 +130,21 @@ public class Discos extends Medios {
 	public String toStringAdmin(){
 		return "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Cnciones: " + canciones + "\n" + "Soporte: " + soporte + "\n" + "ISMN: " + ismn + "\n" + "Numero de registro: " +  numRegistro
-												+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra" + precioCompra;
+												+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra: " + precioCompra;
 		
 	}
+	public Discos(int numRegistro) {
+		this.numRegistro = numRegistro;
+	}
+	/*
+	public int compareTo(Discos o){
+		return Integer.compareTo(o.numRegistro);
+	}
 	
+	public boolean equals(Discos o){
+		return this.numRegistro.equals(o.numRegistro);
+	}
+	*/
 	
 
 }

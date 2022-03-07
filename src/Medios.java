@@ -1,5 +1,5 @@
 
-public abstract class Medios {
+public abstract class Medios{
 	
 	/*
 	 * Atributos
@@ -65,6 +65,10 @@ public abstract class Medios {
 	public void setPrecioCompra(double precioCompra) {
 		this.precioCompra = precioCompra;
 	}
+	public Medios(int numRegistro) {
+		this.numRegistro = numRegistro;
+	}
+	
 	
 	
 
