@@ -22,8 +22,8 @@ public class Peliculas extends Medios {
 	 * 
 	 */
 	public Peliculas(String isan, int anoPublicacion, String titulo, String director, String soporte, String protagonista, String estilo, String duracion,
-			int numRegistro, String fechaAdquisiscion, double precioCompra) {
-				super(numRegistro, fechaAdquisiscion, precioCompra);
+			int numRegistro, String fechaAdquisiscion, double precioCompra, int ejemplares) {
+				super(numRegistro, fechaAdquisiscion, precioCompra, ejemplares);
 				
 		this.isan = isan;
 		this.anoPublicacion = anoPublicacion;
@@ -33,6 +33,7 @@ public class Peliculas extends Medios {
 		this.protagonista = protagonista;
 		this.estilo = estilo;
 		this.duracion = duracion;
+		
 	}
 	/**
 	 * @return the isan
@@ -137,7 +138,7 @@ public class Peliculas extends Medios {
 	public String toString(){
 		return  "Titulo: " + titulo + "\n" + "Director: " + director + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Duracion: " + duracion + "\n" + "Estilo: " + estilo + "\n" + "Protagonista: " + protagonista + "\n" + "Soporte: " + soporte+ "\n" +
-												 "ISAN :" + isan;
+												 "ISAN :" + isan +"\n"  + "Ejemplares:" + ejemplares;
 		
 		
 	}
@@ -145,7 +146,7 @@ public class Peliculas extends Medios {
 		return  "Titulo: " + titulo + "\n" + "Director: " + director + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Duracion: " + duracion + "\n" + "Estilo: " + estilo + "\n" + "Protagonista: " + protagonista + "\n" + "Soporte: " + soporte
 												+ "ISAN :" + isan + "\n" + "Numero de registro: " +  numRegistro
-												+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra: " + precioCompra;
+												+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra: " + precioCompra +"\n"  + "Ejemplares:" + ejemplares;
 		
 		
 	}

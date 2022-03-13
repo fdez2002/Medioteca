@@ -7,11 +7,11 @@ import java.util.Scanner;
  */
 	public class App {
 	
-	public static ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();//Array de usuarios
-	public static ArrayList<Libros> listaLibros = new ArrayList<Libros>();;//Array de libros
-	public static ArrayList<Discos> listaDiscos = new ArrayList<Discos>();;//Array de discos
-	public static ArrayList<Revistas> listaRevistas = new ArrayList<Revistas>();;//Array de revistas
-	public static ArrayList<Peliculas> listaPeliculas = new ArrayList<Peliculas>();;//Array de peliculas
+	private static ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();//Array de usuarios
+	private static ArrayList<Libros> listaLibros = new ArrayList<Libros>();;//Array de libros
+	private static ArrayList<Discos> listaDiscos = new ArrayList<Discos>();;//Array de discos
+	private static ArrayList<Revistas> listaRevistas = new ArrayList<Revistas>();;//Array de revistas
+	private static ArrayList<Peliculas> listaPeliculas = new ArrayList<Peliculas>();;//Array de peliculas
 
 	public static Usuario usuarioLogado = new Usuario();//Objeto de usuarios
 	public static Libros libro = new Libros();//Objeto de Libros
@@ -33,21 +33,21 @@ import java.util.Scanner;
 	listaUsuarios.add(new Usuario("66520460B", "Sara", "Peñafiel", "Diaz", 20));//Usuario 4
 	
 	//listaLibros = new Arraylist<Libros>();
-	listaLibros.add(0,new Libros("9788492719129", 1555, 209, "El lazarillo", "Moral", "Indice", "Desconocido", 209, "12/02/2009", 8));//Libro 1
-	listaLibros.add(1,new Libros("8788492719129", 1605, 179, "Don quijote", "Comedia", "Indice", "Miguel De Cervantes", 309, "13/02/2009", 10));//Libro 1
-	listaLibros.add(2,new Libros("7788492719129", 1555, 309, "El arte de la guerra", "Drama", "Indice", "Raul Checheno", 189, "14/02/2009", 5));//Libro 1
+	listaLibros.add(0,new Libros("9788492719129", 1555, 209, "El lazarillo", "Moral", "Indice", "Desconocido", 209, "12/02/2009", 8, 1));//Libro 1
+	listaLibros.add(1,new Libros("8788492719129", 1605, 179, "Don quijote", "Comedia", "Indice", "Miguel De Cervantes", 309, "13/02/2009", 10 ,3));//Libro 1
+	listaLibros.add(2,new Libros("7788492719129", 1555, 309, "El arte de la guerra", "Drama", "Indice", "Raul Checheno", 189, "14/02/2009", 5, 6));//Libro 1
 	
-	listaDiscos.add(0,new Discos("12345678910111213", 1991, "Nevermind", "Nirvana", "Rock", "Cancion1-Cancion2", "CD", 235, "12/08/2019", 5.2));//Disco 1
-	listaDiscos.add(1,new Discos("22345678910111213", 1996, "Ramours", "Fleetwood", "Rock", "Cancion1-Cancion2", "CD", 568, "13/08/2019", 9.2));//Disco 2
-	listaDiscos.add(2,new Discos("32345678910111213", 1999, "Revolver", "The Beatles", "Rock", "Cancion1-Cancion2", "CD", 577, "14/08/2019", 7.2));//Disco 3
+	listaDiscos.add(0,new Discos("12345678910111213", 1991, "Nevermind", "Nirvana", "Rock", "Cancion1-Cancion2", "CD", 235, "12/08/2019", 5.2, 8));//Disco 1
+	listaDiscos.add(1,new Discos("22345678910111213", 1996, "Ramours", "Fleetwood", "Rock", "Cancion1-Cancion2", "CD", 568, "13/08/2019", 9.2, 5));//Disco 2
+	listaDiscos.add(2,new Discos("32345678910111213", 1999, "Revolver", "The Beatles", "Rock", "Cancion1-Cancion2", "CD", 577, "14/08/2019", 7.2, 2));//Disco 3
 	
-	listaRevistas.add(0,new Revistas("0788492719129", 2018, 309, "Revista 1", "Humor", "Indice", 429, "24/02/2009", 7.3));//Revistas 1
-	listaRevistas.add(1,new Revistas("4788492719129", 2020, 409, "Revista 2", "Noticias", "Indice", 220, "24/02/2009", 4.3));//Revistas 2
-	listaRevistas.add(2,new Revistas("6788492719129", 2021, 509, "Revista 3", "Pemas", "Indice", 829, "24/02/2009", 9.3));//Revistas 3
+	listaRevistas.add(0,new Revistas("0788492719129", 2018, 309, "Revista 1", "Humor", "Indice", 429, "24/02/2009", 7.3, 9));//Revistas 1
+	listaRevistas.add(1,new Revistas("4788492719129", 2020, 409, "Revista 2", "Noticias", "Indice", 220, "24/02/2009", 4.3, 3));//Revistas 2
+	listaRevistas.add(2,new Revistas("6788492719129", 2021, 509, "Revista 3", "Pemas", "Indice", 829, "24/02/2009", 9.3, 5));//Revistas 3
 	
-	listaPeliculas.add(0,new Peliculas("52345678910111213", 2001, "Titanic", "Juan", "CD", "Protagonista1", "Amor", "1:29", 409, "12/04/2021", 1.2));//Pelicula 1
-	listaPeliculas.add(1,new Peliculas("52345678910111213", 2011, "Titanic2", "Juan2", "CD", "Protagonista2", "Amor2", "1:23", 609, "13/04/2021", 4.2));//Pelicula 2
-	listaPeliculas.add(2,new Peliculas("52345678910111213", 2021, "Titanic3", "Juan3", "CD", "Protagonista3", "Amor3", "1:24", 239, "14/04/2021", 2.2));//Pelicula 3
+	listaPeliculas.add(0,new Peliculas("52345678910111213", 2001, "Titanic", "Juan", "CD", "Protagonista1", "Amor", "1:29", 409, "12/04/2021", 1.2, 2));//Pelicula 1
+	listaPeliculas.add(1,new Peliculas("52345678910111213", 2011, "Titanic2", "Juan2", "CD", "Protagonista2", "Amor2", "1:23", 609, "13/04/2021", 4.2, 3));//Pelicula 2
+	listaPeliculas.add(2,new Peliculas("52345678910111213", 2021, "Titanic3", "Juan3", "CD", "Protagonista3", "Amor3", "1:24", 239, "14/04/2021", 2.2, 4));//Pelicula 3
 	
 	}
 	public static  Libros obtenerLibro(int i) {
@@ -55,9 +55,9 @@ import java.util.Scanner;
 		return listaLibros.get(i);
 	}
 	/*
-	 * 
+	 * Muestra los libros disponibles
 	 */
-	public static void recorrerLibros() {
+	private static void recorrerLibros() {
 		System.out.println(" ------------------");
 		System.out.println("|Libros Disponibles|");
 		System.out.println(" ------------------");
@@ -69,7 +69,10 @@ import java.util.Scanner;
 
 		}
 	}
-	public static void recorrerDiscos() {
+	/**
+	 * Muestra al usuario los discos
+	 */
+	private static void recorrerDiscos() {
 		System.out.println(" ------------------");
 		System.out.println("|Discos Disponibles|");
 		System.out.println(" ------------------");
@@ -81,7 +84,10 @@ import java.util.Scanner;
 
 		}
 	}
-	public static void recorrerRevistas() {
+	/*
+	 * Muestra al usuario las revistas
+	 */
+	private static void recorrerRevistas() {
 		System.out.println(" ------------------");
 		System.out.println("|Revistas Disponibles|");
 		System.out.println(" ------------------");
@@ -93,7 +99,10 @@ import java.util.Scanner;
 
 		}
 	}
-	public static void recorrerPeliculas() {
+	/*
+	 * Muestra al usuario las peliculas
+	 */
+	private static void recorrerPeliculas() {
 		System.out.println(" ------------------");
 		System.out.println("|Peliculas Disponibles|");
 		System.out.println(" ------------------");
@@ -106,9 +115,9 @@ import java.util.Scanner;
 		}
 	}
 	/*
-	 * Recorrer Administrador
+	 * Muestra la informacion al administrador que no le interesa al usuario normal
 	 */
-	public static void recorrerLibrosAdmin() {
+	private static void recorrerLibrosAdmin() {
 		System.out.println(" ------------------");
 		System.out.println("|Libros Disponibles|");
 		System.out.println(" ------------------");
@@ -120,7 +129,10 @@ import java.util.Scanner;
 
 		}
 	}
-	public static void recorrerDiscosAdmin() {
+	/*
+	 * Recorre los discos con toda su informacion al administrador
+	 */
+	private static void recorrerDiscosAdmin() {
 		System.out.println(" ------------------");
 		System.out.println("|Discos Disponibles|");
 		System.out.println(" ------------------");
@@ -132,7 +144,10 @@ import java.util.Scanner;
 
 		}
 	}
-	public static void recorrerRevistasAdmin() {
+	/*
+	 * Muestra las revistas con todos sus datos al administrador
+	 */
+	private static void recorrerRevistasAdmin() {
 		System.out.println(" ------------------");
 		System.out.println("|Revistas Disponibles|");
 		System.out.println(" ------------------");
@@ -144,7 +159,10 @@ import java.util.Scanner;
 
 		}
 	}
-	public static void recorrerPeliculasAdmin() {
+	/*
+	 * Muestra las peliculas con todos sus datos al administrador
+	 */
+	private static void recorrerPeliculasAdmin() {
 		System.out.println(" ------------------");
 		System.out.println("|Peliculas Disponibles|");
 		System.out.println(" ------------------");
@@ -160,7 +178,7 @@ import java.util.Scanner;
 	/*
 	 * Validacion de DNI
 	 */
-	public static  boolean validarDni(String dni) {
+	private static  boolean validarDni(String dni) {
 		
 		return dni.matches("^[0-9]{7,8}[T|R|W|A|G|M|Y|F|P|D|D|X|B|N|J|Z|S|Q|V|H|L|C|K|E]$");
 		
@@ -169,7 +187,7 @@ import java.util.Scanner;
 	 * Validacion nombre
 	 */
 	
-	public static boolean validarNombre(String nombre) {
+	private static boolean validarNombre(String nombre) {
 
         return nombre.matches("^([A-Z]{1}[a-z]+[ ]*){1,5}$");
 
@@ -177,7 +195,7 @@ import java.util.Scanner;
 	/*
 	 * validacionFirstapellido
 	 */
-	public static boolean validarPrimerApellido(String primerApellido) {
+	private static boolean validarPrimerApellido(String primerApellido) {
 
         return primerApellido.matches("^([A-Z]{1}[a-z]+[ ]*){1}$");
 
@@ -185,7 +203,7 @@ import java.util.Scanner;
 	/*
 	 * Validacion segundo apellido
 	 */
-	public static boolean validarSegundoApellido(String segundoApellido) {
+	private static boolean validarSegundoApellido(String segundoApellido) {
 
         return segundoApellido.matches("^([A-Z]{1}[a-z]+[ ]*){1}$");
 
@@ -193,15 +211,16 @@ import java.util.Scanner;
 	/*
 	 * Validacion edad
 	 */
-	public static boolean validarEdad(String edad1) {
+	private static boolean validarEdad(String edad1) {
 
         return edad1.matches("^[12-99]{2}$");
 
     }
 	/*
-	 * Creacion nueva cuenta
+	 * Creacion nueva cuenta, permite al usuario crear una cuenta con la peticion de los datos
+	 * dichos datos se almacenan en un array de usuario
 	 */
-	public  static Usuario nuevaCuenta() {
+	private  static Usuario nuevaCuenta() {
 		
 		Usuario usuario = new Usuario();//Objeto de usuarios
 
@@ -209,7 +228,7 @@ import java.util.Scanner;
 		System.out.print("Para comenzar con la cracion de su cuenta le vamos a solicitar los siguientes datos: " + "\n" + "DNI: ");
 		String dni = teclado.next();
 		
-		//DNI
+		//LLama al metodo dni y nos dice si ese dni es valido o no
 		if (validarDni(dni) == false) {
 			do {
 					
@@ -276,7 +295,7 @@ import java.util.Scanner;
 		return usuario;
 	}
 	/*
-	 * Ingresar a la cuenta
+	 * Ingresar a la cuenta, se comprobara si el dni esta loggeado o no
 	 * 
 	 */
 	public static int comprobarCuenta(String dni) {
@@ -284,8 +303,11 @@ import java.util.Scanner;
 		Collections.sort(listaUsuarios);
 		return Collections.binarySearch(listaUsuarios,usBuscar);
 	}
-	
-	public static void datosDisco() {
+	/**
+	 * Permite al administrador crear un nuevo disco
+	 * Mismos metodos se usaran para la modificacion de datos
+	 */
+	private static void datosDisco() {
 		System.out.println("ISMN");
 		String ismn = teclado.next();
 		disco.setIsmn(ismn);
@@ -325,8 +347,17 @@ import java.util.Scanner;
 		System.out.println("Precio de compra");
 		double precioCompra = teclado.nextDouble();
 		disco.setPrecioCompra(precioCompra);
+		
+		System.out.println("Ejemplares");
+		int ejemplar = teclado.nextInt();
+		disco.setEjemplares(ejemplar);
 	}
-	public static void datosLibro() {
+	/**
+	 * Permite al administrador crear un nuevo Libro
+	 * Mismos metodos se usaran para la modificacion de datos
+	 */
+
+	private static void datosLibro() {
 		System.out.println("ISBM");
 		String isbm = teclado.next();
 		libro.setIsbm(isbm);
@@ -361,13 +392,21 @@ import java.util.Scanner;
 		
 		System.out.println("Fecha de adquisicion, con formato DD/MM/YYYY");
 		String fechaAdquisicionLibro = teclado.next();
-		disco.setFechaAdquisicion(fechaAdquisicionLibro);
+		libro.setFechaAdquisicion(fechaAdquisicionLibro);
 		
 		System.out.println("Precio de compra");
 		double precioCompraLibro = teclado.nextDouble();
-		disco.setPrecioCompra(precioCompraLibro);
+		libro.setPrecioCompra(precioCompraLibro);
+		
+		System.out.println("Ejemplares");
+		int ejemplar = teclado.nextInt();
+		libro.setEjemplares(ejemplar);
 	}
-	public static void datosPelicula() {
+	/**
+	 * Permite al administrador crear una nueva pelicula
+	 * Mismos metodos se usaran para la modificacion de datos
+	 */
+	private static void datosPelicula() {
 		System.out.println("ISAM");
 		String isam = teclado.next();
 		pelicula.setIsan(isam);
@@ -407,8 +446,16 @@ import java.util.Scanner;
 		System.out.println("Precio de compra");
 		double precioCompraPelicula = teclado.nextDouble();
 		pelicula.setPrecioCompra(precioCompraPelicula);
+		
+		System.out.println("Ejemplares");
+		int ejemplar = teclado.nextInt();
+		pelicula.setEjemplares(ejemplar);
 	}
-	public static void datosRevista() {
+	/**
+	 * Permite al administrador crear una nueva revista
+	 * Mismos metodos se usaran para la modificacion de datos
+	 */
+	private static void datosRevista() {
 		System.out.println("Año de publicacion");
 		int annoRevista = teclado.nextInt();
 		revista.setAnoPublicacion(annoRevista);
@@ -432,11 +479,15 @@ import java.util.Scanner;
 		System.out.println("Precio de compra");
 		double precioCompraRevista = teclado.nextDouble();
 		revista.setPrecioCompra(precioCompraRevista);
+		
+		System.out.println("Ejemplares");
+		int ejemplar = teclado.nextInt();
+		revista.setEjemplares(ejemplar);
 	}
 	/*
-	 * Añadir medios
+	 * Añadir medios, le pregunta al admin que medios quiere añadir, sabiendo esto se le redirigira al dicho medio
 	 */
-	public static void añadirMedios() {
+	private static void añadirMedios() {
 		
 		String opcionesMenu2 = "";
 		System.out.println("¿Que tipo de medio quiere añadir? ");
@@ -477,7 +528,12 @@ import java.util.Scanner;
 		menuAdministrador();
 		
 	}
-	public static boolean encontrarPosicionDiscos(int numeroRegistro ){
+	/**
+	 * Estos metodos nos permiten saber la posicion de los arrayList sabiendo un dato de dentro del ArrayList
+	 * @param numeroRegistro
+	 * @return
+	 */
+	private static boolean encontrarPosicionDiscos(int numeroRegistro ){
 		boolean indice = false;
 		int i;
 		
@@ -492,7 +548,12 @@ import java.util.Scanner;
 
 		return indice;
 	}
-	public static int posicionDiscos(int numeroRegistro ){
+	/**
+	 * 
+	 * @param numeroRegistro
+	 * @return
+	 */
+	private static int posicionDiscos(int numeroRegistro ){
 		
 		int indice = 0;
 		for(int i = 0; i < listaDiscos.size(); i++) {
@@ -503,11 +564,13 @@ import java.util.Scanner;
 		}
 		return indice;
 	}
-	/*
+	/**
 	 * 
+	 * @param numeroRegistro
+	 * @return
 	 */
 
-	public static boolean  encontrarPosicionLibros(int numeroRegistro){
+	private static boolean  encontrarPosicionLibros(int numeroRegistro){
 		boolean indice = false;
 		int i;
 		
@@ -522,7 +585,12 @@ import java.util.Scanner;
 
 		return indice;
 	}
-	public static int posicionLibros(int numeroRegistro ){
+	/**
+	 * 
+	 * @param numeroRegistro
+	 * @return
+	 */
+	private static int posicionLibros(int numeroRegistro ){
 		int indice = 0;
 
 		if(encontrarPosicionDiscos(numeroRegistro) == true) {
@@ -536,11 +604,13 @@ import java.util.Scanner;
 			}
 		return indice;
 	}
-	/*
+	/**
 	 * 
+	 * @param numeroRegistro
+	 * @return
 	 */
 	
-	public static boolean  encontrarPosicionPeliculas(int numeroRegistro){
+	private static boolean  encontrarPosicionPeliculas(int numeroRegistro){
 		boolean indice = false;
 		int i;
 		
@@ -555,7 +625,12 @@ import java.util.Scanner;
 
 		return indice;
 	}
-	public static int posicionPeliculas(int numeroRegistro ){
+	/**
+	 * 
+	 * @param numeroRegistro
+	 * @return
+	 */
+	private static int posicionPeliculas(int numeroRegistro ){
 		int indice = 0;
 
 		if(encontrarPosicionDiscos(numeroRegistro) == true) {
@@ -569,10 +644,12 @@ import java.util.Scanner;
 			}
 		return indice;
 	}
-	/*
+	/**
 	 * 
+	 * @param numeroRegistro
+	 * @return
 	 */
-	public static boolean  encontrarPosicionRevistas(int numeroRegistro){
+	private static boolean  encontrarPosicionRevistas(int numeroRegistro){
 		boolean indice = false;
 		int i;
 		
@@ -587,7 +664,12 @@ import java.util.Scanner;
 
 		return indice;
 	}
-	public static int posicionRevistas(int numeroRegistro ){
+	/**
+	 * 
+	 * @param numeroRegistro
+	 * @return
+	 */
+	private static int posicionRevistas(int numeroRegistro ){
 		int indice = 0;
 
 		if(encontrarPosicionDiscos(numeroRegistro) == true) {
@@ -602,9 +684,9 @@ import java.util.Scanner;
 		return indice;
 	}
 	/*
-	 * Borrar medios
+	 * Borrar medios, permite al admin borra algun medio introduciendo el numero de registro de dicho medio
 	 */
-	public static void  borrarMedios() {
+	private static void  borrarMedios() {
 		String opcionesMenu3 = "";
 		System.out.println("¿Que tipo de medio quiere eliminar? ");
 		System.out.println("D--> Discos ");
@@ -684,9 +766,11 @@ import java.util.Scanner;
 		}
 		menuAdministrador();
 	}
-
+	/**
+	 * Menu para modificar los medios
+	 */
 	
-	public static void modificarMedios() {
+	private static void modificarMedios() {
 		System.out.println("¿Que tipo de medio quiere modificar? ");
 		System.out.println("D--> Discos ");
 		System.out.println("L--> Libros ");
@@ -743,9 +827,9 @@ import java.util.Scanner;
 	}
 	
 	/*
-	 * Menu admin
+	 * Menu admin, controla y redirige al administrador a la tarea que quiera realizar
 	 */
-	public static void menuAdministrador() {
+	private static void menuAdministrador() {
 		int opcionesMenu1;
 		System.out.println("1---> Añadir medios");
 		System.out.println("2---> Modificar datos de medios");
@@ -766,18 +850,18 @@ import java.util.Scanner;
 				break;
 			
 		}
-		//App.menuApp();
+		despedida();
 	}
 	/*
 	 * Menu usuario
 	 */
-	public static void menuUsuario(){
+	private static void menuUsuario(){
 		System.out.println("Bienvenido " + "¿Que desea realizar?");
 		System.out.println("1---> Comprar un articulo");
 		System.out.println("2---> Enviar un articulo");
 	}
 	/*
-	 * Menu de la aplicacion
+	 * Menu de la aplicacion, controla al usuario y sirve como loggeo para el adiminsitrador, es el menu principal
 	 * 
 	 */
 	public  void menuApp() {
@@ -793,14 +877,14 @@ import java.util.Scanner;
 				recorrerRevistas();
 				System.out.println();
 				recorrerPeliculas();
-				
+				do {
 				System.out.println("Que desea realizar?" + "\n" + "1--> Creacion de cuenta \n" + "2--> Ingrese a la cuenta");
-				System.out.println("3--> Para salir");
+				//System.out.println("3--> Para salir");
 				
 				opcionesMenu = teclado.nextInt();
-				
+				String dni = "";
+
 				switch(opcionesMenu) {
-				
 					case 1:
 						Usuario nuevo=nuevaCuenta();
 						listaUsuarios.add(nuevo);
@@ -808,9 +892,16 @@ import java.util.Scanner;
 						break;
 						
 					case 2:
-						System.out.println("Ingrese su DNI");
-						String dni = teclado.next();
+						
+						try {
+							System.out.println("Ingrese su DNI");
+							dni = teclado.next();
+						}catch(IndexOutOfBoundsException e){
+							System.out.println("DNI no valido");
+
+						}
 						int posicion=comprobarCuenta(dni);//Se comprueba si existe la cuenta
+
 						
 						if (posicion == -1) {
 							System.out.println("Usuario No Encontrado");
@@ -836,10 +927,14 @@ import java.util.Scanner;
 						break;
 							
 				}
+				}while((opcionesMenu != 1) || (opcionesMenu != 2)|| (opcionesMenu != 3 ));
 					
 	
 	}
-	public  void despedida() {
+	/**
+	 * 
+	 */
+	public static void despedida() {
 		System.out.println("Vuelva pronto");
 	}
 }

@@ -18,8 +18,8 @@ public class Revistas extends Medios {
 	 * Constructor con parametros
 	 */
 	public Revistas(String isbm, int anoPublicacion, int numPaginas, String titulo, String tematica, String indice, 
-			int numRegistro, String fechaAdquisiscion, double precioCompra) {
-				super(numRegistro, fechaAdquisiscion, precioCompra);
+			int numRegistro, String fechaAdquisiscion, double precioCompra, int ejemplares) {
+				super(numRegistro, fechaAdquisiscion, precioCompra, ejemplares);
 			
 		this.isbm = isbm;
 		this.anoPublicacion = anoPublicacion;
@@ -103,14 +103,14 @@ public class Revistas extends Medios {
 	@Override
 	public String toString(){
 		return "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
-											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm;
+											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm +"\n"  + "Ejemplares:" + ejemplares;
 		
 		
 	}
 	public String toStringAdmin(){
 		return "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm + "\n" + "Numero de registro: " +  numRegistro
-											+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra: " + precioCompra;
+											+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra: " + precioCompra +"\n"  + "Ejemplares:" + ejemplares;
 		
 		
 	}

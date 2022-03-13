@@ -7,6 +7,7 @@ public abstract class Medios{
 	protected int numRegistro;
 	protected String fechaAdquisicion;
 	protected double precioCompra;
+	protected int ejemplares;
 	
 	/*
 	 * Constructor sin parametros
@@ -18,10 +19,11 @@ public abstract class Medios{
 	 * Constructor con parámetros
 	 * 
 	 */
-	public Medios (int numRegistro, String fechaAdquisicion, double precioCompra) {
+	public Medios (int numRegistro, String fechaAdquisicion, double precioCompra, int ejemplares) {
 		this.numRegistro = numRegistro;
 		this.fechaAdquisicion = fechaAdquisicion;
 		this.precioCompra = precioCompra;
+		this.ejemplares = ejemplares;
 	}
 
 	/**
@@ -57,6 +59,19 @@ public abstract class Medios{
 	 */
 	public double getPrecioCompra() {
 		return precioCompra;
+	}
+	/**
+	 * 
+	 * @param ejemplares
+	 */
+	public void setEjemplares(int ejemplares) {
+		this.ejemplares = ejemplares;
+	}
+	/*
+	 * @return the ejemplares
+	 */
+	public int getEjemplares() {
+		return ejemplares;
 	}
 
 	/**

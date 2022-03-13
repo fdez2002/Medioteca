@@ -24,8 +24,8 @@ public class Discos  extends Medios{
 	 * 
 	 */
 	public Discos(String ismn, int anoPublicacion, String titulo, String interprete, String estilo, String canciones, String soporte,
-			int numRegistro, String fechaAdquisiscion, double precioCompra) {
-				super(numRegistro, fechaAdquisiscion, precioCompra);
+			int numRegistro, String fechaAdquisiscion, double precioCompra, int ejemplares) {
+				super(numRegistro, fechaAdquisiscion, precioCompra, ejemplares);
 
 		this.ismn = ismn;
 		this.anoPublicacion = anoPublicacion;
@@ -124,13 +124,13 @@ public class Discos  extends Medios{
 	@Override
 	public String toString(){
 		return "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
-											+ "Cnciones: " + canciones + "\n" + "Soporte: " + soporte + "\n" + "ISMN: " + ismn;
+											+ "Cnciones: " + canciones + "\n" + "Soporte: " + soporte + "\n" + "ISMN: " + ismn +"\n"  + "Ejemplares:" + ejemplares;
 		
 	}
 	public String toStringAdmin(){
-		return "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
+		return "Titulo: " + titulo + "\n" + "Interprete: " + interprete + "\n" + "Estilo: " + estilo + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 
 											+ "Cnciones: " + canciones + "\n" + "Soporte: " + soporte + "\n" + "ISMN: " + ismn + "\n" + "Numero de registro: " +  numRegistro
-												+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra: " + precioCompra;
+												+ "\n" + "Fecha de adquisicion: " + fechaAdquisicion + "\n" + "Precio Compra: " + precioCompra +"\n"  + "Ejemplares:" + ejemplares;
 		
 	}
 	public Discos(int numRegistro) {
