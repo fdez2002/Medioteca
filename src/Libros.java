@@ -115,6 +115,9 @@ public class Libros extends Medios {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
+	/**
+	 * 
+	 */
 	
 	@Override
 	public String toString(){
@@ -122,6 +125,10 @@ public class Libros extends Medios {
 											+ "Indice: " + indice + "\n" + "Nuemro de paginas: " + numPaginas + "\n" + "ISBM: " + isbm +"\n"  + "Ejemplares:" + ejemplares;
 		
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	
 	public String toStringAdmin() {
 		return  "Titulo: " + titulo + "\n" + "Tematica: " + tematica + "\n" + "Autor: " + autor + "\n" + "Año de publicacion: " + anoPublicacion + "\n" 

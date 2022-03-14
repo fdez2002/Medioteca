@@ -2,7 +2,17 @@ import java.util.*;
 import java.util.Scanner;
 
 /**
- * @author Antonio Fernández Villa 
+ * 
+ * @author Antonio Fernández Villa
+ * Programa orientado a la gestion de una medioteca, una collecion de medios
+ * los culaes se realizan una serie de funciones para la gestion de la misma.
+ * Los medio disponibles son: libros, revistas, discos, y peluculas introducidos
+ * en sus respectivas clases coectados por herencia mediante una clase pruncipal
+ * llamada Medios la cual comparte atributos que sirven para las anteriores clases
+ * La clase App se encarga del funcionamiento y gestion de estos medios con los diferentes 
+ * metodos y con la crecaion de arrayList que almacenaran los articulos.
+ * Cuenta con una clase Usuario
+ * 
  *
  */
 	public class App {
@@ -177,6 +187,12 @@ import java.util.Scanner;
 	
 	/*
 	 * Validacion de DNI
+	 * Expresion regular que nos indica si el dni es correcto o no validando el formato de la cadena
+	 * El metodo matches nos indica si se cumple
+	 * (^$--> Obliga al programa que el dato introducido debe empezar y terminar como se indica INICIO y Final)
+	 * [0-9]--> Lo que esta incluido en este caso los numeros del 0 al 9
+	 * {7,8}--> Nuemero de repeticiones
+	 * []--> Letras que son validas para un dni
 	 */
 	private static  boolean validarDni(String dni) {
 		
@@ -185,6 +201,9 @@ import java.util.Scanner;
 	}
 	/*
 	 * Validacion nombre
+	 * Empezaria con una letra mayuscula
+	 * + nos indica que tiene que estar una letra mayuscula y algunas minusculas
+	 * * 0 o varios
 	 */
 	
 	private static boolean validarNombre(String nombre) {
